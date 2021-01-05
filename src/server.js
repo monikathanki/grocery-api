@@ -1,5 +1,13 @@
+const knex = require('knex')
 let app = require('./app')
-let {PORT} = require('./config')
+let { PORT, DATABASE_URL } = require('./config')
+
+const db = knex({
+  client: 'pg',
+  connection: DATABASE_URL,
+})
+
+app.set('db', db)
 
 
 app.listen(PORT, () => {
