@@ -6,7 +6,7 @@ module.exports = {
   JWT_SECRET: process.env.JWT_SECRET || 'grocery-list-api-jwt',
   JWT_EXPIRY: process.env.JWT_EXPIRY || '3h',
   TEST_DATABASE_URL: process.env.TEST_DATABASE_URL || "postgresql://dunder_mifflin@localhost/grocery_test"
-  
+
 }
 
 //https://dry-lowlands-85202.herokuapp.com
