@@ -22,18 +22,18 @@ Both Pending and Completed Lists are visible on the "Grocery List Lists" dashboa
 
 ## Technologies
 
-> Node and Express
-> Authentication via JWT
-> RESTful API
+- Node and Express
+- Authentication via JWT
+- RESTful API
 
 ## Testing
 
-> Supertest (integration)
-> Mocha and Chai (unit)
+- Supertest (integration)
+- Mocha and Chai (unit)
 
 ## Database
-> Postgres
-> Knex.js
+- Postgres
+- Knex.js
 
 ## Production
 
