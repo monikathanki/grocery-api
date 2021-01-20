@@ -1,26 +1,70 @@
-# Express Boilerplate!
+# Grocery Shopping List
 
-This is a boilerplate project used for starting new projects!
+Live App: [https://grocery-shopping-list.vercel.app](url)
 
-## Set up
+## Introduction
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Grocery shopping list app is a app where user can create grocery  list. Manage expenses for each category and re-used same grocery list for next shopping
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+Grocery shopping list are divided into five categories main categories:
 
-## Scripts
+1. Vegetables
+2. Fruits
+3. Grains
+4. Frozen
+5. Miscellaneous  
 
-Start the application `npm start`
+After a user creates a Grocery Shopping List, they can find it in the "Pending list" column on their "Completed list" dashboard.
 
-Start nodemon for the application `npm run dev`
+Once they've marked a list complete, it moves to the "Completed Lists" column so they can view their shopping list over time.
 
-Run the tests `npm test`
+Both Pending and Completed Lists are visible on the "Grocery List Lists" dashboard if a user clicks on them. This will open up the lists so the user can see when it was created; it's also where users can update/edit their liss and delete them if necessary.
 
-## Deploying
+## Technologies
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+> Node and Express
+> Authentication via JWT
+> RESTful API
+
+## Testing
+
+> Supertest (integration)
+> Mocha and Chai (unit)
+
+## Database
+> Postgres
+> Knex.js
+
+## Production
+
+Deployed via Heroku
+
+### API Endpoints
+## User Router
+
+`- /api/users`
+`- - GET - gets all users`
+`- - POST - creates a new user`
+
+## Lists Router
+`- /api/lists`
+`- - GET - gets all lists`
+`- - POST - creates a new list`
+
+## Lists/:id Router
+- /api/lists/:id 
+- - GET - gets list by id 
+- - DELETE - deletes a list by id 
+- - PATCH - updates a list by id 
+- - PUT - marks list complete or incomplete by id 
+
+## Categories Router
+`- /api/categories `
+`- - GET - gets all categories `
+
+## Categories/:id Router
+`- /api/categories/:id`
+`- - GET - gets categories by id `
+
+
+
