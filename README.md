@@ -42,29 +42,29 @@ Deployed via Heroku
 ### API Endpoints
 ## User Router
 
-`- /api/users`
-`- - GET - gets all users`
-`- - POST - creates a new user`
+- /api/users
+  - GET - gets all users
+  - POST - creates a new user
 
 ## Lists Router
-`- /api/lists`
-`- - GET - gets all lists`
-`- - POST - creates a new list`
+- /api/lists
+  - GET - gets all lists
+  - POST - creates a new list`
 
 ## Lists/:id Router
 - /api/lists/:id 
-- - GET - gets list by id 
-- - DELETE - deletes a list by id 
-- - PATCH - updates a list by id 
-- - PUT - marks list complete or incomplete by id 
+  - GET - gets list by id 
+  - DELETE - deletes a list by id 
+  - PATCH - updates a list by id 
+  - PUT - marks list complete or incomplete by id 
 
 ## Categories Router
-`- /api/categories `
-`- - GET - gets all categories `
+- /api/categories 
+  - GET - gets all categories 
 
 ## Categories/:id Router
-`- /api/categories/:id`
-`- - GET - gets categories by id `
+- /api/categories/:id
+ - GET - gets categories by id 
 
 
 
