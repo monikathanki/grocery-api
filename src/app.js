@@ -3,11 +3,12 @@ let express = require('express')
 let morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
-let { NODE_ENV } = require('./config')
+const { NODE_ENV, CLIENT_ORIGIN } = require('./config')
 const usersRouter = require("./users/users-router")
 const authRouter = require("./auth/auth-router")
 const categoriesRouter = require("./Categories/categories-router");
 const listsRouter = require("./lists/lists-router")
+
 
 
 const app = express()
@@ -19,7 +20,10 @@ const morganOption = (NODE_ENV === 'production')
 
 app.use(morgan(morganOption))
 app.use(helmet())
-app.use(cors())
+app.use(cors({
+    origin: CLIENT_ORIGIN
+})
+);
 app.use(express.json());
 app.use(usersRouter)
 app.use("/api/auth/", authRouter);
