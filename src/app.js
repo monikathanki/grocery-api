@@ -19,15 +19,14 @@ const morganOption = (NODE_ENV === 'production')
 
 app.use(morgan(morganOption))
 app.use(helmet())
-app.use(cors());
+const {CLIENT_ORIGIN} = require('./config');
 
-app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "https://grocery-shopping-list-64v2u3whv-monikathanki.vercel.app/");
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type");
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-})
+app.use(
+    cors({
+        origin: CLIENT_ORIGIN
+    })
+);
+
 app.use(express.json());
 app.use(usersRouter)
 app.use("/api/auth/", authRouter);
